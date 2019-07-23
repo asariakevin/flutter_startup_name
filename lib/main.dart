@@ -7,6 +7,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
+
     return MaterialApp(
       title: 'Welcome to Flutter',
       
@@ -15,8 +17,9 @@ class MyApp extends StatelessWidget {
           title: const Text("Welcome To Flutter"),
         ),
         
-        body: const Center(
-          child: const Text('Hello World'),
+        body:  Center(
+//          child: const Text('Hello World'),
+            child:  Text(wordPair.asPascalCase),
         ),
       ),
     );
